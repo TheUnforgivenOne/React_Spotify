@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from 'react-router-dom';
 
-import { authEndpoint, clientId, redirectUri } from "../../../config/authConstants";
+import { authEndpoint, clientId, redirectUri } from "../../../constants/authConstants";
 import { getHash } from './utils'
 
 const AuthButton = () => {

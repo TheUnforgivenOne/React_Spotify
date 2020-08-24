@@ -1,0 +1,6 @@
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    border-right: 1px solid black;
+}

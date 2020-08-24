@@ -1,25 +1,34 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Provider } from 'react-redux'
+import { createStore } from 'redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import AuthButton from "./components/AuthButton";
-import HomePage from "./components/HomePage";
-import UserPage from "./components/UserPage";
+import rootReducer from '../reducers/rootReducer'
+import HomePage from "./containers/HomePage";
+import UserPage from "./containers/UserPage";
+import Header from "./containers/Header";
 
 import './App.css';
 
+const store = createStore(rootReducer);
+
 const App = () => {
   return (
-    <BrowserRouter>
-      <AuthButton />
-      <Switch>
-        <Route path="user">
-          <UserPage />
-        </Route>
-        <Route path="/">
-          <HomePage />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div className="wrapper">
+          <Header />
+          <Switch>
+            <Route path="/user">
+              <UserPage />
+            </Route>
+            <Route path="/">
+              <HomePage />
+            </Route>
+          </Switch>
+        </div>
+      </BrowserRouter>
+    </Provider>
   );
 };
 
