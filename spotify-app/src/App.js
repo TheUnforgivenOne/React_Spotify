@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import rootReducer from '../reducers/rootReducer'
+import rootReducer from './reducers/rootReducer'
 import HomePage from "./containers/HomePage";
 import UserPage from "./containers/UserPage";
 import Header from "./containers/Header";

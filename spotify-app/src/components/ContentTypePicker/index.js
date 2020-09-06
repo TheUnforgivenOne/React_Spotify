@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { setContentType } from '../../../reducers/contentTypePickerSlice';
+import { setContentType } from '../../reducers/contentTypePickerSlice';
 
 import "./contentTypePicker.css"
 
