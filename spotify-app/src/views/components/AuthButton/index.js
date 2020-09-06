@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from 'react-router-dom';
 
-import { authEndpoint, clientId, redirectUri } from "../../../config/authConstants";
+import { authEndpoint, clientId, redirectUri } from "../../../constants/authConstants";
 import { getHash } from './utils'
 
 const AuthButton = () => {
@@ -22,9 +22,7 @@ const AuthButton = () => {
 
   return (
     <>
-      <a href={spotifyAuthUri}>Auth Spotify</a>
-      {token ? <p>Success login</p> : <p>You are not logged in</p>}
-      {/*<button onClick={redirectToSpotifyAuth}>Auth Spotify</button>*/}
+      {token ? <p>Success login</p> : <a href={spotifyAuthUri}>Auth Spotify</a>}
     </>
   );
 };
