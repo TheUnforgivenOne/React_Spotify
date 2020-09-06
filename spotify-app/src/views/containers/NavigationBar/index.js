@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContentTypePicker from "../ContentTypePicker";
+import ContentTypePicker from "../../components/ContentTypePicker";
 
 import './navigationBar.css'
 

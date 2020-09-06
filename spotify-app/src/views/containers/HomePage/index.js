@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavigationBar from "../../components/NavigationBar";
+import NavigationBar from "../NavigationBar";
 import MainContent from "../../components/MainContent";
 
 import './homePage.css'

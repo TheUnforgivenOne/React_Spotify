@@ -22,9 +22,7 @@ const AuthButton = () => {
 
   return (
     <>
-      <a href={spotifyAuthUri}>Auth Spotify</a>
-      {token ? <p>Success login</p> : <p>You are not logged in</p>}
-      {/*<button onClick={redirectToSpotifyAuth}>Auth Spotify</button>*/}
+      {token ? <p>Success login</p> : <a href={spotifyAuthUri}>Auth Spotify</a>}
     </>
   );
 };
